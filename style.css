@@ -1,0 +1,97 @@
+body {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #FF4500;
+}
+.calculator{
+    display: grid;
+    grid-template-areas:
+        "result result result result"
+        "display display display display"
+        "btn-reset btn-multi btn-divide btn-back"
+        "btn-7 btn-8 btn-9 btn-minus"
+        "btn-4 btn-5 btn-6 btn-plus"
+        "btn-1 btn-2 btn-3 myArea"
+        "btn-comma btn-0 btn-dot myArea";
+    gap: 10px;
+    width: 300px;
+    justify-content: center;
+    /* padding-left: 10px; */
+    border: 0px solid black;
+    padding: 15px;
+    background-color: white;
+    border-radius: 10px;
+}
+.btn { 
+    font-size: 20px;
+    width: 70px;
+    height: 50px;
+    font-weight: bold;
+}
+
+button{
+    background-color: white;
+    border: none;
+    border-radius: 10px;
+    box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+    cursor: pointer;
+}
+
+button:hover{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+
+}
+.display{
+    /* min-width: 250px; */
+    width: 100%;
+    grid-area: display;
+    height: 50px;
+    font-size: 35px;
+    text-align:right;
+    padding-right: 10px;
+    border: none;
+    font-family:  Orbitron, sans-serif;
+    /* font-optical-sizing: auto; */
+    font-weight: 400;
+    font-style: normal;
+    /* background-color: aqua; */
+    /* padding-top: 100px;  */
+    overflow-y: auto;  /*Allow vertical scrolling
+    /* overflow-x:hidden; Prevent horizontal scroll */
+    /* white-space: pre-wrap; Enable wrapping to a new line  */
+    overflow-wrap:anywhere;
+    display: flex;              /* Use flexbox for alignment */
+    align-items: flex-end;     /* Align items to the bottom */
+    justify-content: flex-end;
+}
+
+.btn-num{
+    color: #FF4500;
+}
+
+.btn-r {
+    grid-area: myArea;
+    font-size: 24px;
+    background-color: #FF4500;
+}
+
+.result {
+    height: 80px; 
+    margin: 20px -5px;
+    grid-area: result;
+    font-size: 70px;
+    overflow-y:auto;  
+    overflow-wrap:break-word;
+    display: flex;              
+    align-items: flex-end;    
+    justify-content: flex-end;
+    font-family:  Orbitron, sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    /* background-color: aqua; */
+}
